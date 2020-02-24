@@ -33,15 +33,16 @@ popd &>/dev/null;
 
 echo "Installing dependencies required for tests in codegens/csharp-restsharp"
 pushd ./codegens/csharp-restsharp &>/dev/null;
-  wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-  sudo dpkg -i packages-microsoft-prod.deb
-  sudo apt-get install apt-transport-https
-  sudo apt-get update
-  sudo apt-get install dotnet-sdk-2.2
-  dotnet new console -o testProject
-  pushd ./testProject &>/dev/null;
-  dotnet add package RestSharp
-  popd &>/dev/null;
+  # wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+  # sudo dpkg -i packages-microsoft-prod.deb
+  # sudo apt-get install apt-transport-https
+  # sudo apt-get update
+  # sudo apt-get install dotnet-sdk-2.2
+  # dotnet new console -o testProject
+  # pushd ./testProject &>/dev/null;
+  # dotnet add package RestSharp
+  # popd &>/dev/null;
+  unzip testProject.zip
 popd &>/dev/null;
 
 echo "Installing dependencies required for tests in codegens/php-httprequest2"
