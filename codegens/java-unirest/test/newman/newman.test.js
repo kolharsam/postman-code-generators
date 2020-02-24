@@ -1,7 +1,8 @@
 var runNewmanTest = require('../../../../test/codegen/newman/newmanTestUtil').runNewmanTest,
   convert = require('../../lib/index').convert;
 
-describe('Convert for different types of request', function () {
+// eslint-disable-next-line mocha/no-skipped-tests
+describe.skip('Convert for different types of request', function () {
   var testConfig = {
       runScript: 'java -cp *: main',
       compileScript: 'javac -cp *: main.java',
